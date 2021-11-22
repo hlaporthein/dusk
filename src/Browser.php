@@ -116,7 +116,7 @@ class Browser
      * Create a browser instance.
      *
      * @param  \Facebook\WebDriver\Remote\RemoteWebDriver  $driver
-     * @param  \Laravel\Dusk\ElementResolver  $resolver
+     * @param  \Laravel\Dusk\ElementResolver|null  $resolver
      * @return void
      */
     public function __construct($driver, $resolver = null)
@@ -457,7 +457,7 @@ class Browser
     /**
      * Execute a Closure with a scoped browser instance.
      *
-     * @param  string  $selector
+     * @param  string|\Laravel\Dusk\Component  $selector
      * @param  \Closure  $callback
      * @return $this
      */
@@ -469,7 +469,7 @@ class Browser
     /**
      * Execute a Closure with a scoped browser instance.
      *
-     * @param  string  $selector
+     * @param  string|\Laravel\Dusk\Component  $selector
      * @param  \Closure  $callback
      * @return $this
      */
@@ -495,7 +495,7 @@ class Browser
     /**
      * Execute a Closure outside of the current browser scope.
      *
-     * @param  string  $selector
+     * @param  string|\Laravel\Dusk\Component  $selector
      * @param  \Closure  $callback
      * @return $this
      */
